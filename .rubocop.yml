@@ -1,0 +1,17 @@
+inherit_from: .rubocop_todo.yml
+
+Style/AsciiComments:
+  Enabled: false
+
+# migrationの除外
+Layout/ExtraSpacing:
+  Exclude:
+    - "db/migrate/*.rb"
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - "db/schema.rb"
