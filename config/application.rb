@@ -29,6 +29,13 @@ module MhrizeLayring
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    # 言語の設定
+    config.i18n.default_locale = :ja
+
+    # タイムゾーンの設定
+    config.time_zone = 'Tokyo'
+    # DBでの時刻の読み込み
+    config.active_record.default_timezone = :local
     config.assets.initialize_on_precompile = false
     config.generators do |g|
       g.test_framework :rspec,
